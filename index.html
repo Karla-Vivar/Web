@@ -25,25 +25,42 @@
             margin-right: auto;
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
             font-size: 100px;
             padding: 5px;
             
         }
 
-        .menu{
-            width: 70%;
-            height: 80%;
+        nav {
+            background-color: rgb(224, 218, 159);
+            position: sticky;
+            overflow: hidden;
             display: block;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            font-size: 25px;
+            width: 70%;
+            height: 80%;
             padding: 5px;
-            background-color: wheat;
-            overflow: hidden;
-            position: sticky;
-
+            top: 0;
         }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        
+       
+        }
+ 
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+   
    
         .contenedor{
             width: 70%;
@@ -76,6 +93,19 @@
             padding: 5px;
         }
 
+        .img{
+            width: 70%;
+            height: 80%;
+            background-color: rgb(211, 187, 136);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            overflow: hidden;
+            padding: 5px;
+        }
+          @media (max-width: 700px){}
+
     </style>
 </head>
 <body class="cuerpo">
@@ -84,13 +114,21 @@
     Bitacora 
    </header>
 
-   <div class="menu">
-    menu :]
-   </div>
+    <nav>
+        <ul>
+            <li><a href="">Temas anteriores</a></li>
+            <li><a href="">DOM animaciones y css</a></li>
+            <li><a href="">Diagrama web</a></li>
+            <li><a href="">Viewport</a></li>
+            <li><a href="">Conferencias IA</a></li>
+            <li><a href="">Unidades de medida</a></li>
+            <li><a href="">Diagrama de flujo</a></li>
+        </ul>
+    </nav>
 
-    <div class="contenedor">
+    <div class="contenedor" id="gtemasant">
         <h3>Grafico de temas anteriores</h3>
-        <br><br>
+        <br>
         <div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: auto; margin-bottom: 0.9em; overflow: hidden;
         border-radius: 8px; will-change: transform;">
@@ -98,26 +136,26 @@
         src="https://www.canva.com/design/DAGvUtxUDEE/mTtrtmPaxploXrOwEFDpcg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
         </iframe>
         </div>
-       <br><br>
+       <br>
 </div>
 
-<div class="contenedor">
+<div class="contenedor" id="domycss">
        <h3> DOM, animaciones, eventos y CSS</h3>
-        <br><br>
+        <br>
         <iframe style="position: relative; width: 100%; border: 1px solid rgba(0, 0, 0, 0.1);" width="800" 
         height="450" src="https://embed.figma.com/board/bYPt8URv2BhQTd3rhzpmYb/DOM?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-        <br><br>
+        <br>
 </div>
 
-<div class="contenedor">
-       <h3> Analisis a pagina existente </h3>
+<div class="contenedor" id="dweb">
+       <h3> Analisis a pagina existente - Diagrama web </h3>
        <br>
        <iframe style="position: relative; width: 100%;" width="768" height="640" src="https://miro.com/app/live-embed/uXjVJSxztmk=/?focusWidget=3458764637648525818&embedMode=view_only_without_ui&embedId=916873505380"
         frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-         <br><br>
+         <br>
 </div>
 
-<div class="contenedor">
+<div class="contenedor" id="vieport">
        <h3>Significado de vieport</h3>
     <div class="texto">
 
@@ -127,7 +165,7 @@
     </div>
 </div>
 
-<div class="contenedor">
+<div class="contenedor" id="confia">
     <h3>Platica de IA resumen</h3>
         <div class="texto">
 
@@ -135,32 +173,53 @@
         el uso responsable de la IA fue en esta donde se le llamo la atencion a la <br>
         presentadora por el como decia que gracias a la IA muchos ya no ocupan contratar artistas <br>
         lo cual con razon, provoco disgusto en el publico</p> 
-        <p>La verdad si hubiera sido por mi me hubiera ahorrado todo el discurso desobre el 
-
+        <p>La verdad si hubiera sido por mi me hubiera ahorrado todo el discurso desobre el como <br>
+        los artistas y diseñadores debemos empezar a usar la IA en todo y lo hubiera resumido a un <br>
+        simple, "es una heramienta" por todo lo demas el discurso acerca de la consientisacion y su <br>
+        buen uso me parecio bien fue sencillo pero funcional.    
         </p>
 
     </div>
 </div>
-<div class="contenedor">
+<div class="contenedor" id="med">
 
     <h3>Unidades de medida estaticas y relativas</h3>
         <div class="texto">
+            Las unidades de medida estaticas tal como su nombre indica, se refieren a un metodo para medir <br>
+            el tamaño de distintos elementos de nuestra pagina como lo serian titulos e imagenes usando de base <br>
+            pixeles, pulgadas y centimetros, mas sin embargo estas no cambian ni se adaptan cuando son vistas en<br>
+            dispositivos ya sea mas grandes o pequeños de ahi el nombre de estaticas. <br><br>
 
-        aqui lo que son las unidades de medida estaticas y relativas
+            Por otro lado las unidades relativas al igual que su contraparte estatica son unidades de medida con <br>
+            la diferencia que estas se miden utilizando porcentajes ademas de adaptarse al tamaño del dispositivo y/o <br>
+            ventana.
+
 
     </div>
 </div>
 
- <div class="contenedor">
+ <div class="contenedor" id="diaflujo">
 
-    <h3>Diagrama de flujo</h3>
+    <h3>Diagrama juego - Diagrama de flujo</h3>
+    <br>
+    <iframe style=" position: relative; border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="640" 
+    src="https://embed.figma.com/board/1PWBQRMtFZhY74YJ4zEGiY/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
    
 </div>  
 
-
+    <picture class="img">
+        <source media="(min-width: 900px)" srcset="https://images7.memedroid.com/images/UPLOADED213/63f303757e38e.jpeg">
+        <source media="(min-width: 600px)" srcset="https://i.imgflip.com/8t8m00.png">
+        <img src="https://media.tenor.com/pf24pBOW2EIAAAAe/no-hace-nada-hace-algo.png" alt="hace algo" style="width: 400px; height: auto;">
+    </picture>
 
 </body>
+
 <footer class="pie">
-    fin :]
+    <div class="texto">
+        Karla vivar rayon <br>
+        Grupo: A <br>
+        HTML Adaptativo 
+    </div>
 </footer>
 </html>
