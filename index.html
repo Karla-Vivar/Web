@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*........................................*/
 
         @property --pepito {
             syntax: "<color>";
@@ -32,7 +81,7 @@
         }
 
         nav {
-            background-color: rgb(224, 218, 159);
+            background-color: rgb(221, 159, 89);
             position: sticky;
             overflow: hidden;
             display: block;
@@ -59,13 +108,19 @@
             display: inline;
             margin: 10px;
         }
+      nav ul li a{
+        text-decoration: none;
+        color: rgb(102, 47, 21);
+
+        }
 
    
    
         .contenedor{
             width: 70%;
             height: 80%;
-            background-color: rgb(211, 187, 136);
+            background-color: rgb(235, 223, 198);
+            color: rgb(66, 15, 15);
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -76,9 +131,12 @@
 
         .texto{
             font-size: 15px;
-            
             padding: 5px;
                    
+        }
+
+        h3{
+            font-size: 25px;
         }
         .pie{
             background-color: var(--pepito);
@@ -93,10 +151,8 @@
             padding: 5px;
         }
 
-        .img{
-            width: 70%;
-            height: 80%;
-            background-color: rgb(211, 187, 136);
+        .img{  
+
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -104,6 +160,18 @@
             overflow: hidden;
             padding: 5px;
         }
+
+        .ejemplo{
+            color: rgb(34, 36, 122);
+            font-size: 3rem;
+        }
+
+        .dos{
+            color: rgb(202, 49, 49);
+            font-size: 6rem;
+        }
+
+
           @media (max-width: 700px){}
 
     </style>
@@ -116,13 +184,16 @@
 
     <nav>
         <ul>
-            <li><a href="">Temas anteriores</a></li>
-            <li><a href="">DOM animaciones y css</a></li>
-            <li><a href="">Diagrama web</a></li>
-            <li><a href="">Viewport</a></li>
-            <li><a href="">Conferencias IA</a></li>
-            <li><a href="">Unidades de medida</a></li>
-            <li><a href="">Diagrama de flujo</a></li>
+            <li><a href="#gtemasant">Temas anteriores</a></li>
+            <li><a href="#domycss">DOM animaciones y css</a></li>
+            <li><a href="#dweb">Diagrama web</a></li>
+            <li><a href="#vieport">Viewport</a></li>
+            <li><a href="#confia">Conferencias IA</a></li>
+            <li><a href="#med">Unidades de medida</a></li>
+            <li><a href="#diaflujo">Diagrama de flujo</a></li>
+            <li><a href="#imgadp">Imagen adaptativa</a></li>
+            <li><a href="clsp">Clases separadas por espacios</a></li>
+            <li><a href="mf">Codigo mobile first</a></li>
         </ul>
     </nav>
 
@@ -160,7 +231,7 @@
     <div class="texto">
 
         <p>Vieport se refiere a lo que se ve en la pantalla de un dispositivo <br>
-        y el como se acomoda el contenido dependiendo del tamaño de pantalla</p>
+        y el como se acomoda el contenido dependiendo del tamaño de pantalla</p> <br><br><br> 
 
     </div>
 </div>
@@ -176,7 +247,7 @@
         <p>La verdad si hubiera sido por mi me hubiera ahorrado todo el discurso desobre el como <br>
         los artistas y diseñadores debemos empezar a usar la IA en todo y lo hubiera resumido a un <br>
         simple, "es una heramienta" por todo lo demas el discurso acerca de la consientisacion y su <br>
-        buen uso me parecio bien fue sencillo pero funcional.    
+        buen uso me parecio bien fue sencillo pero funcional. <br><br><br>    
         </p>
 
     </div>
@@ -192,7 +263,7 @@
 
             Por otro lado las unidades relativas al igual que su contraparte estatica son unidades de medida con <br>
             la diferencia que estas se miden utilizando porcentajes ademas de adaptarse al tamaño del dispositivo y/o <br>
-            ventana.
+            ventana.   <br><br><br> 
 
 
     </div>
@@ -206,13 +277,30 @@
     src="https://embed.figma.com/board/1PWBQRMtFZhY74YJ4zEGiY/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
    
 </div>  
-
-    <picture class="img">
+    <div class="contenedor" id="imgadp">
+      <h3>Imagen adaptativa</h3>
+    <picture class="img" id="">
         <source media="(min-width: 900px)" srcset="https://images7.memedroid.com/images/UPLOADED213/63f303757e38e.jpeg">
         <source media="(min-width: 600px)" srcset="https://i.imgflip.com/8t8m00.png">
         <img src="https://media.tenor.com/pf24pBOW2EIAAAAe/no-hace-nada-hace-algo.png" alt="hace algo" style="width: 400px; height: auto;">
     </picture>
+</div>
 
+<div class="contenedor" id="clsp">
+    <h3>Clases separadas por espacios</h3>
+    <div class="texto"> 
+          ejemplificacion de como funciona con texto
+    </div>
+    <h4 class="ejemplo">HOLA</h4>
+    <h4 class="ejemplo dos">HOLA</h4>
+
+
+</div>
+
+<div class="contenedor" id="mf">
+    <h3>Codigo on mobile first</h3>
+
+</div>
 </body>
 
 <footer class="pie">
