@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link ref="favicon" href="Img/coso.png">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <title>Document</title>
     <style>
 
@@ -149,6 +150,7 @@
             <li><a href="#mf">Codigo mobile first</a></li>
             <li><a href="#logo">Logo</a></li>
             <li><a href="#imagen2">ilustracion adaptativa</a></li>
+            <li><a href="#java">contenido agredado con java</a></li>
         </ul>
     </nav>
 
@@ -260,7 +262,7 @@
 </div>
 
 <div class="contenedor" id="logo">
-    <h3>Diseño de logo</h3>
+    <h3>Diseño de logo</h3> <br>
     <picture class="img">
         <img src="Img/logo.png" alt="" style="width: 400px; height: auto;">
     </picture>
@@ -269,8 +271,87 @@
 </div>
 
 <div class="contenedor" id="imagen2">
-     <h3>Ilustracion adaptativa</h3>
+     <h3>Ilustracion adaptativa</h3> <br>
      <a href="ilustracion_a/Untitled-1.html">ilustracion adaptativa</a>
+</div>
+<div class="contenedor" id="java" >
+    <script>
+        //comentario :)
+        console.log("El script se esta ejecutando");
+        document.write("<h2>Contenido agregado en JS</h2>");
+        //una variable es un espacio de memoria a la que se le puede asignar algo
+        
+        //variables que si cambian
+        let nombre;
+        nobre =  "Juan Jose David"
+
+        var edad = 32;
+        //variable que no cambia
+        const CURP = "ejemplo curp"
+
+        var entero = 10;
+        var decimal = 3.14;
+        var suma = entero + decimal 
+
+        //estructuras de control:
+        //if
+        var calificacionUno = 10;
+
+        if (calificacionUno >= 10){
+            console.log("Aprobo")
+        }
+        else{
+            console.log("Reprobo")
+        }
+         //for "contador"
+         var cosa;
+         for (let i = 0; i < 6; i++) {
+         console.log(i); 
+         }
+
+        //while otro contador, no se me ocurre nada :[
+        let ejemplo = 0;
+
+        while(ejemplo < 3){
+              console.log("hola numero: " + ejemplo);
+              ejemplo++;
+        }
+        //do while
+        let i = 0;
+
+        do {
+           console.log("The value of i is:", i);
+                i++;
+        } while (i < 5);
+
+    </script>
+   <picture class="img">
+        <img src="Img/captura_1.png" alt="" style="width: 400px; height: auto;">
+        <img src="Img/captura_2.png" alt="" style="width: 400px; height: auto;">
+        <img src="Img/captura_3.png" alt="" style="width: 400px; height: auto;">
+        <img src="Img/captura_4.png" alt="" style="width: 400px; height: auto;">
+    </picture>
+</div>
+
+<div class="contenedor" id="uacj">
+    <h3>Prototipado de alta fidelidad</h3> <br>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" 
+    src="https://embed.figma.com/design/mN0UdLgdZchDzqeySQxkBr/Sin-t%C3%ADtulo?node-id=20-2&embed-host=share" 
+    allowfullscreen></iframe> <br>
+
+    <h3>Mock ups</h3> <br>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG1QcC0ykk/_FatgFFowM7W96oqru18iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG1QcC0ykk&#x2F;_FatgFFowM7W96oqru18iA&#x2F;view?utm_content=DAG1QcC0ykk&amp;
+utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Diseño</a> 
+
+
+
 </div>
 </body>
 
