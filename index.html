@@ -6,6 +6,8 @@
     <link ref="favicon" href="Img/coso.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
     <style>
 
@@ -34,10 +36,11 @@
             
         }
 
-        nav {
-            background-color: rgb(221, 159, 89);
+    
+    
+        .navbar{
+           
             position: sticky;
-            overflow: hidden;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -48,30 +51,33 @@
             top: 0;
             z-index: 1;
         }
-        nav ul {
+
+        
+        .navbar ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: center;
+            text-align: left;
             font-size: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-        
-       
+            font-family: Arial, Helvetica, sans-serif;                                
         }
  
-        nav ul li{
+        .navbar ul li{
             display: inline;
             margin: 10px;
+            
         }
-      nav ul li a{
+      .navbar ul li a{
         text-decoration: none;
-        color: rgb(102, 47, 21);
+        color: rgb(17, 6, 1);
+        
 
         }
 
-    nav a:hover{
-    transform: scale(2.5);
-    color: #fffef1;}
+    .navbar a:hover{
+    transform: scale(1.5);
+    }
+    
    
    
         .contenedor{
@@ -80,21 +86,25 @@
             background-color: rgb(235, 223, 198);
             color: rgb(66, 15, 15);
             display: block;
+            overflow: hidden;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             padding: 5px;
+            z-index: 0;
         }
 
         .texto{
             font-size: 15px;
             padding: 5px;
+            z-index: 0;
                    
         }
 
         h3{
             font-size: 25px;
+            z-index: 0;
         }
         .pie{
             background-color: var(--pepito);
@@ -107,6 +117,7 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: 100px;
             padding: 5px;
+            z-index: 0;
         }
 
         .img{  
@@ -117,22 +128,50 @@
             text-align: center;
             overflow: hidden;
             padding: 5px;
+            z-index: 0;
         }
 
         .ejemplo{
             color: rgb(34, 36, 122);
             font-size: 3rem;
+            z-index: 0;
         }
 
         .dos{
             color: rgb(202, 49, 49);
             font-size: 6rem;
+            z-index: 0;
         }
 
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  #cookie-banner button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
 
           @media (max-width: 700px){}
 
     </style>
+
+
 </head>
 <body class="cuerpo">
    
@@ -140,29 +179,85 @@
     Bitacora 
    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#gtemasant">Temas anteriores</a></li>
-            <li><a href="#domycss">DOM animaciones y css</a></li>
-            <li><a href="#dweb">Diagrama web</a></li>
-            <li><a href="#vieport">Viewport</a></li>
-            <li><a href="#confia">Conferencias IA</a></li>
-            <li><a href="#med">Unidades de medida</a></li>
-            <li><a href="#diaflujo">Diagrama de flujo</a></li>
-            <li><a href="#imgadp">Imagen adaptativa</a></li>
-            <li><a href="#clsp">Clases separadas por espacios</a></li>
-            <li><a href="#mf">Codigo mobile first</a></li>
-            <li><a href="#logo">Logo</a></li>
-            <li><a href="#imagen2">ilustracion adaptativa</a></li>
-            <li><a href="#java">contenido agredado con java</a></li>
-            <li><a href="#uacj">Prototipado de alta fidelidad</a></li>
-            <li><a href="#pag">Pagina Clue</a></li>
-            <li><a href="#color">Pagina explicacion</a></li>
-            <li><a href="#ejemplo">Funciones java script </a></li>
-            <li><a href="#parall">Parallax </a></li>
-            <li><a href="#flex">Flexbox </a></li>
-            <li><a href="#cotizacion">cotizacion </a></li>
-        </ul>
+
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">bitacora</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNavDropdown" style="background-color: rgb(221, 159, 89);">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+            </li>         
+        <div class="navbar-collapse collapse" id="navbarNavDropdown" style="background-color: rgb(221, 159, 89);" >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                parcial 1
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#gtemasant">Temas anteriores</a></li>
+                <li><a href="#domycss">DOM animaciones y css</a></li>
+                <li><a href="#dweb">Diagrama web</a></li>
+                <li><a href="#vieport">Viewport</a></li>
+                <li><a href="#confia">Conferencias IA</a></li>
+                <li><a href="#med">Unidades de medida</a></li>
+                <li><a href="#diaflujo">Diagrama de flujo</a></li>
+                <li><a href="#imgadp">Imagen adaptativa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                parcial 2
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#clsp">Clases separadas por espacios</a></li>
+                <li><a href="#mf">Codigo mobile first</a></li>
+                <li><a href="#logo">Logo</a></li>
+                <li><a href="#imagen2">ilustracion adaptativa</a></li>
+                <li><a href="#java">contenido agredado con java</a></li>
+                <li><a href="#uacj">Prototipado de alta fidelidad</a></li>
+                <li><a href="#pag">Pagina Clue</a></li>
+                <li><a href="#color">Pagina explicacion</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                parcial 3
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#ejemplo">Funciones java script </a></li>
+                <li><a href="#parall">Parallax </a></li>
+                <li><a href="#flex">Flexbox </a></li>
+                <li><a href="#cotizacion">cotizacion </a></li>
+                <li><a href="#par3">parcial 3 proyecto </a></li>
+                <li><a href="#pag3">parcial 3 pagina </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="contenedor" id="gtemasant">
@@ -457,7 +552,8 @@ el elemento "padre".
         se muestra a continuacion:
 
         1. Descripción general del servicio
-Se presenta la siguiente propuesta para el desarrollo de un sitio web profesional y adaptable, con diseño personalizado, optimización básica para buscadores (SEO), integración de contenidos y compatibilidad con dispositivos móviles (responsive design).
+Se presenta la siguiente propuesta para el desarrollo de un sitio web profesional y adaptable, con diseño personalizado, optimización básica para buscadores (SEO), 
+integración de contenidos y compatibilidad con dispositivos móviles (responsive design).
 El proyecto tiene como finalidad establecer una presencia digital sólida, moderna y funcional, que refleje la identidad y objetivos del cliente. <br><br>
 2. Alcance del proyecto
 Concepto	Descripción	Costo (MXN)
@@ -472,7 +568,8 @@ Pruebas y ajustes finales	Verificación de funcionalidad en distintos dispositiv
 Total general: $9,300.00 MXN
 
 3. Tiempo estimado de entrega
-El tiempo estimado para la realización del proyecto es de 15 a 20 días hábiles, contados a partir de la recepción del anticipo y del contenido proporcionado por el cliente (textos, imágenes y logotipo).
+El tiempo estimado para la realización del proyecto es de 15 a 20 días hábiles, contados a partir de la recepción del anticipo y 
+del contenido proporcionado por el cliente (textos, imágenes y logotipo).
 4. Condiciones de pago
 50% de anticipo al iniciar el proyecto.
 50% restante al momento de la entrega final del sitio web.
@@ -486,15 +583,62 @@ Redacción profesional de contenido	$800.00
 Integración avanzada con redes sociales	$400.00
 Optimización SEO avanzada	$1,000.00
 6. Observaciones
-El desarrollo se realizará conforme a los lineamientos acordados con el cliente. Se garantiza confidencialidad, cumplimiento de plazos y entrega del proyecto en óptimas condiciones de funcionamiento.
+El desarrollo se realizará conforme a los lineamientos acordados con el cliente. Se garantiza confidencialidad, 
+cumplimiento de plazos y entrega del proyecto en óptimas condiciones de funcionamiento.
  
     </div>
+    
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+     <div id="cookie-banner">
+  <span>Este sitio utiliza cookies.</span>
+  <button onclick="aceptarCookies()">Aceptar</button>
+</div>
+
+<script>
+  function aceptarCookies() {
+    localStorage.setItem("cookies-aceptadas", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  // Ocultar el banner si ya se aceptaron las cookies
+  window.onload = function() {
+    if (localStorage.getItem("cookies-aceptadas") === "true") {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+  };
+</script>
+
+<div class="contenedor" id="par3">
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG10Z-6Ues/6uDWHJCtPNNvBPqYapMXVA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG10Z-6Ues&#x2F;6uDWHJCtPNNvBPqYapMXVA&#x2F;view?utm_content=DAG10Z-6Ues&amp;
+utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Copia de DMDb FINAL</a> de Lucia Gomez
+</div>
+
+<div class="contenedor" id="pag3">
+    <a href="https://emariver.github.io/CIPHER/">pagina proyecto parcial 3</a>
 </div>
 
 
 
 
+
+
 </body>
+
+
+
+
+
 
 <footer class="pie">
     <div class="texto">
